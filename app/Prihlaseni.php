@@ -13,30 +13,28 @@
         <div class="main">
             <div class="new_main">
                 <div class="new_header">
-                    <a href="/~xkopac05/IIS/index.php"><h4>Zpìt na úvodní stránku</h4></a>
+                    <a href="/"><h4>Zpet na uvodni stranku</h4></a>
                 </div>
 
                 <?php include('errors.php'); ?>
 
                 <form  method="post">
                     <div class="kolonka">
-                        <label>Jméno</label>
-                        <input type="text" name="jmeno" placeholder="Uzivatelské jméno">
+                        <label>Jmeno</label>
+                        <input type="text" name="jmeno" placeholder="Uzivatelske jmeno">
                     </div>
                     <div class="kolonka">
                         <label>Heslo</label>
-                        <input type="password" name="heslo" placeholder="U&#382;ivatélske heslo">
+                        <input type="password" name="heslo" placeholder="Uzivatelske heslo">
                     </div>
                     <div class="kolonka">
-                        <button  type="submit" name="login" class='btn'>Pøihlásit</button>
+                        <button  type="submit" name="login" class='btn'>Prihlasit</button>
                     </div>
                     <p>
-                        Jste registrován? <a href="Registrace.php">Registrovat</a>
+                        Jste registrovan? <a href="Registrace.php">Registrovat</a>
                     </p>
                 </form>
-
             </div>
         </div>
     </body>
-    
 </html>

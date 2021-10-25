@@ -16,7 +16,7 @@
                         <div class="hide">
                     <?php endif ?>
                         <div class="button">
-                            <a href="Prihlaseni.php">Pøihlásit</a>
+                            <a href="Prihlaseni.php">Prihlasit</a>
                         </div>
                         <div class="button">
                             <a href="Registrace.php">Registrovat</a>
@@ -33,7 +33,7 @@
                             ?>
                         </div>
 
-                    <form  method="post" action="/~xkopac05/IIS/index.php">
+                    <form  method="post" action="/">
                         <div class="prihlasen">    
                             <button method="post"  name="logout">Logout</button>
                         </div>
@@ -50,7 +50,7 @@
                     <div class="line_1">
                         <div class="line_2">
                             <div class="nadpis">
-                                <a href="/~xkopac05/IIS/index.php"><h1>Pivnice</h1></a>
+                                <a href="/"><h1>Pivnice</h1></a>
                             </div>
                         </div>
                     </div>
@@ -59,7 +59,7 @@
 
             <div class="vyhledavani">
                 <form method="post">
-                    <p>Vyhledání piva</p>
+                    <p>Vyhledani piva</p>
                     <input type="text" name="pivov" placeholder="Vyber pivo">
                     <button type="submit" name="hledani">Vyhledat</button>
                 </form>
@@ -99,13 +99,13 @@
             <div class="vypis">
                 <?php foreach ($datas as $data): ?>
                     <div class="pivo">
-                        <p><b>Název piva:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b> <?php echo $data['nazev']; ?>          </p>
-                        <p><b>Barva piva:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b> <?php echo $data['barva']; ?>          </p>
-                        <p><b>Styl kva&#353;ení:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b> <?php echo $data['styl_kvaseni']; ?>   </p>
-                        <p><b>Typ:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b> <?php echo $data['typ']; ?>            </p>
-                        <p><b>Obsah alkoholu:&nbsp;&nbsp;</b> <?php echo $data['obsah_alkoholu']; ?> </p>
+                        <p><b>Nazev piva:</b> <?php echo $data['nazev']; ?>          </p>
+                        <p><b>Barva piva:</b> <?php echo $data['barva']; ?>          </p>
+                        <p><b>Styl kvaseni:</b> <?php echo $data['styl_kvaseni']; ?>   </p>
+                        <p><b>Typ:</b> <?php echo $data['typ']; ?>            </p>
+                        <p><b>Obsah alkoholu:</b> <?php echo $data['obsah_alkoholu']; ?> </p>
                         <?php if (isset($_SESSION['jmeno'])): ?>
-                        <p><b>Hodnoceni:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <p><b>Hodnoceni:
                         <?php
                             $id = $data['id_pivo'];
                             $hodn = "SELECT AVG(rating) FROM pivo_hodnoceni WHERE fk_pivo = $id";
@@ -114,7 +114,7 @@
                                 echo round($row['AVG(rating)']);
                             }
                         ?>
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        
                         <?php foreach(range(1,5) as $rating): ?>
                             <a href="rate.php?pivo=<?php echo $data['id_pivo'];?>&rating=<?php echo $rating; ?>">
                                 <?php echo $rating; ?>
@@ -128,7 +128,7 @@
             <div class="strankovani">
                 <?php 
                     for ($page=1; $page<=$beer_per_page; $page++) {
-                        echo '<a href="Pivo.php?page= ' . $page . '">' . $page," " . '</a>';
+                        echo `<a href='Pivo.php?page= ' . $page . '">' . $page," " . '</a>'`;
                     }
                 ?>
             </div>
@@ -149,14 +149,14 @@
                     <h3>KONTAKT</h3>
                     <ul>
                         <p>Email:   JenPockej@zajici.ru </p>
-                        <p>Telefon: 600 202 006         </p>
+                        <p>Telefon: 600 202 006         </p>
                     </ul>
                 </div>
                 <div class="last">
                     <h3>LOKALITA</h3>
                      <ul>
-                        <p>Purkyòova 2640/93        </p>
-                        <p>612 00 Brno-Královo Pole </p>
+                        <p>Purkynova 2640/93        </p>
+                        <p>612 00 Brno-Kralovo Pole </p>
                     </ul>
                 </div>
             </footer>

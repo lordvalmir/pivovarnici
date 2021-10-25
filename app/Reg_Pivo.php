@@ -3,14 +3,14 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Reg_piva</title>
+        <title>Registrace piva</title>
         <link rel="stylesheet" type="text/css" href="css/main.css">
     </head>
     
     <body>
             <div class="new_main">
                 <div class="new_header">
-                    <a href="/~xkopac05/IIS/index.php"><h4>Zpet na uvodni stranku</h4></a>
+                    <a href="/"><h4>Zpet na uvodni stranku</h4></a>
                 </div>
             
                 <?php include('errors.php'); ?>
@@ -25,7 +25,7 @@
                         <input type="text" name="barva" placeholder="8 = barva se udava ve stupnici EBC">
                     </div>
                     <div class="kolonka">
-                        <label>Styp_kvaseni</label>
+                        <label>Typ kvaseni</label>
                         <input type="text" name="styl_kvaseni" placeholder="Spodne">
                     </div>
                     <div class="kolonka">

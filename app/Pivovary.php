@@ -35,7 +35,7 @@
                             ?>
                         </div>
 
-                    <form  method="post" action="/~xkopac05/IIS/index.php">
+                    <form  method="post" action="/">
                         <div class="prihlasen">    
                             <button method="post" name="logout">Logout</button>
                         </div>
@@ -51,7 +51,7 @@
                     <div class="line_1">
                         <div class="line_2">
                             <div class="nadpis">
-                                <a href="/~xkopac05/IIS/index.php"><h1>Pivnice</h1></a>
+                                <a href="/"><h1>Pivnice</h1></a>
                             </div>
                         </div>
                     </div>

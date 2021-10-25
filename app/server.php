@@ -16,11 +16,11 @@
     //connect to the database
     $db = mysqli_init();
 
-
     $db_address = 'localhost';
     $db_login = 'xkopac05';
-    $db_password = 'r3nemhim';
+    $db_password = '';
     $db_database = 'xkopac05';
+
     if (!mysqli_real_connect($db, $db_address, $db_login, $db_password, $db_database, 0, '/var/run/mysql/mysql.sock')){
         die('cannot connect '.mysqli_connecterror());
     }
@@ -63,7 +63,7 @@
             $_SESSION['jmeno'] = $jmeno;
             $_SESSION['success'] = "Uzivatel: ";
             $_SESSION['hide'];
-            header('location: /~xkopac05/IIS/index.php');
+            header('location: http://localhost/');
         }
     }
 
@@ -90,12 +90,12 @@
                 $_SESSION['success'] = 'Sladek: ';
                 $_SESSION['jmeno'] = $jmeno;
                 $_SESSION['show'] = 'neco';
-                header('location: /~xkopac05/IIS/index.php');
+                header('location: http://localhost/');
             } else if(mysqli_num_rows($result) == 1) {
                 //log uzivatele
                 $_SESSION['success'] = 'Uzivatel: ';
                 $_SESSION['jmeno'] = $jmeno;
-                header('location: /~xkopac05/IIS/index.php');
+                header('location: http://localhost/');
             } else {
                 array_push($errors, "ERROR chybne udaje");
             }
@@ -137,7 +137,7 @@
             $sql = "INSERT INTO pivo (fk_pivovar, nazev, barva, styl_kvaseni, typ, obsah_alkoholu)
                     Values ( $fk_pivovaru, '$nazev', $barva, '$kvaseni', '$typ', $alkohol)";
             mysqli_query($db, $sql);
-	    header('location: /~xkopac05/IIS/app/Pivo.php');
+	    header('location: http://localhost/app/Pivo.php');
         }
     }
 
@@ -147,7 +147,7 @@
         unset($_SESSION['jmeno']);
         unset($_SESSION['success']);
         session_destroy();
-        header('location: /~xkopac05/IIS/index.php');
+        header('location: http://localhost/');
     }
 ?>
 
